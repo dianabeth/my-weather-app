@@ -1,0 +1,158 @@
+/*nav {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+}*/
+
+body {
+  display: block;
+}
+
+p {
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+}
+
+input {
+  position: relative;
+  top: 20px;
+  left: 5px;
+  display: block;
+}
+
+li {
+  position: relative;
+  bottom: 105px;
+  left: 180px;
+  font-family: 'Gotu', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(187, 184, 184);
+  text-align: right;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 20px;
+  font-family: 'Gotu', sans-serif;
+  margin: 5px;
+  padding: 5px;
+  font-weight: 900;
+  color: crimson;
+  text-align: right;
+}
+
+#date,
+#time {
+  font-family: 'Gotu', sans-serif;
+  line-height: 0;
+  font-weight: 900;
+  font-size: 10px;
+  color: crimson;
+  text-align: right;
+}
+
+#search-btn {
+  margin: 5px;
+  left: 6px;
+}
+
+#current {
+  margin: 5px;
+  left: 0;
+}
+
+.header {
+  margin-top: 0;
+}
+
+/*.weather-app {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  border: 1px solid #007bff;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 10px;
+  max-width:50vw;
+  max-height: 100vh;
+  margin-bottom: 0;
+}*/
+
+.weather-app {
+  background-image: url('https://static-spa-homepage.uniplaces.com/offers/274921-Lisbon-Portugal.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 100px;
+  padding: 0;
+  margin: 2px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.navbar-btn {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.temperature {
+  color: #dc143c;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.units {
+  position: relative;
+  top: -15px;
+}
+
+.clear-fix {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(187, 184, 184);
+  text-align: center;
+}
+
+.float-left {
+  color: #0069d9;
+  text-align: center;
+}
+
+.main_reading {
+  position: relative;
+  margin: 30px 5px;
+  bottom: 60px;
+}
+
+.search-btn {
+  margin: 6px;
+  left: 10px;
+}
