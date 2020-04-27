@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Wonder App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Gotu|Merriweather+Sans|Merriweather:300,400,400i,700,900,900i&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4d0ff6fe7e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="row navbar-btn">
+          <div class="col">
+            <button type="button" class="btn btn-outline-primary" id="abuja">
+              Abuja
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="lagos">
+              Lagos
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="lisbon">
+              Lisbon
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="madrid">
+              Madrid
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="paris">
+              Paris
+            </button>
+          </div>
+        </div>
+        <form>
+          <div class="row">
+            <div class="col-9" id="search-form">
+              <input
+                type="text"
+                placeholder="Enter city..."
+                autofocus="on"
+                autocomplete="off"
+                id="search-input"
+                class="form-control shadow-sm border-0"
+              />
+
+              <input
+                type="submit"
+                value="Search"
+                id="search-btn"
+                class="btn btn-primary shadow"
+              />
+              <input
+                type="submit"
+                value="Current Location"
+                id="current"
+                class="btn btn-outline-primary shadow"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="header">
+          <h1></h1>
+          <p id="date"></p>
+          <p id="time"></p>
+        </div>
+        <div class="row main_reading">
+          <div class="col-6">
+            <div class="clear-fix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                alt="partly_cloudy icon"
+                class="weather_icon float-left"
+                id="partly-cloudy"
+              />
+              <span id="description"></span>
+            </div>
+            <div class="float-left">
+              <span class="temperature"></span>
+              <span class="units">
+                ºC
+                <!--<a href="#" id="fahrenheit">ºF</a>-->
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>Humidity <span id="humidity"></span>%</li>
+            <li>Highest: <span id="max"></span>ºC</li>
+            <li>Lowest: <span id="min"></span>ºC</li>
+            <li>Wind: <span id="wind"> </span>km/h</li>
+          </ul>
+        </div>
+
+        <div class="row forecast">
+          <div class="col-2">
+            <div class="clear-fix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/sunny_s_cloudy.png"
+                alt="sunny_s_cloudy icon"
+                class="float-left"
+                id="tuesday"
+              />
+              Tue
+            </div>
+            <div class="float-left">17ºC</div>
+          </div>
+
+          <div class="col-2">
+            <div class="clear-fix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
+                alt="rain cloud icon"
+                class="float-left"
+              />
+              Wed
+            </div>
+            <div class="float-left">15ºC</div>
+          </div>
+
+          <div class="col-2">
+            <div class="clear-fix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/sunny_s_cloudy.png"
+                alt="sunny_cloud icon"
+                class="float-left"
+              />
+              Thur
+            </div>
+            <div class="float-left">18ºC</div>
+          </div>
+
+          <div class="col-2">
+            <div class="clear-fix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                alt="partly_cloudy icon"
+                class="float-left"
+              />
+              Fri
+            </div>
+            <div class="float-left">17ºC</div>
+          </div>
+
+          <div class="col-2">
+            <div class="clear-fix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
+                alt="light_rain icon"
+                class="float-left"
+                id="saturday"
+              />
+              Sat
+            </div>
+            <div class="float-left">17ºC</div>
+          </div>
+
+          <!--  <div class="col-2">
+            <div class="clear-fix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                alt="sunny_s_cloudy icon"
+                class="float-left"
+                id="sunday"
+              />
+              Sun
+            </div>
+            <div class="float-left">17ºC</div>
+          </div>-->
+        </div>
+      </div>
+    </div>
+    <footer>
+      <small>
+        Coded by
+        <a href="#">Diana Odiaka-Obiagwu</a>,
+        <a href="https://github.com/dianabeth">Open-Sourced on GitHub</a>, and
+        hosted on
+        <a href="https://app.netlify.com/teams/dianabeth/sites">
+          Netlify!
+        </a>
+      </small>
+    </footer>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
