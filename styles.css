@@ -36,10 +36,10 @@ li {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Gotu', sans-serif;
   margin: 5px;
-  padding: 5px;
+  padding: 10px 0;
   font-weight: 900;
   color: crimson;
   text-align: right;
@@ -66,6 +66,9 @@ h1 {
   color: darkblue;
 }
 #description {
+  position: relative;
+top: -40px;
+margin: 25px;
   display: inline;
   color: darkblue;
 }
@@ -120,17 +123,16 @@ h1 {
 .temperature {
   color: #dc143c;
   font-weight: 400;
-  font-size: 45px;
+  font-size: 43px;
   line-height: 1;
 }
 
 .units {
   position: relative;
-  top: -18px;
+  top: -22px;
 }
 
 .clear-fix {
-  font-family: 'Roboto', sans-serif;
   color: crimson;
   text-align: center;
 }
