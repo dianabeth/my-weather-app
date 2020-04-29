@@ -115,4 +115,4 @@ let paris = document.querySelector('#paris');
 paris.addEventListener('click', parisTemp);
 
 //Placeholder city temperature
-search('Jos');
+search('Copenhagen');
