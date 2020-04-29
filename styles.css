@@ -67,6 +67,7 @@ h1 {
 }
 #description {
   display: inline;
+  color: #fff;
 }
 
 #humidity,
@@ -119,8 +120,8 @@ h1 {
 .temperature {
   color: #dc143c;
   font-weight: 400;
-  font-size: 34px;
-  /*line-height: 1;*/
+  font-size: 45px;
+  line-height: 1;
 }
 
 .units {
