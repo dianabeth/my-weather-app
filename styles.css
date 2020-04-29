@@ -63,11 +63,11 @@ h1 {
 #current {
   margin: 5px;
   left: 0;
-  color: #000;
+  color: darkblue;
 }
 #description {
   display: inline;
-  color: #fff;
+  color: darkblue;
 }
 
 #humidity,
