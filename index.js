@@ -56,6 +56,12 @@ function currentWeather(response) {
   document.querySelector('#min').innerHTML = Math.round(response.data.main.temp_min);
   document.querySelector('#date').innerHTML = formatDate(response.data.dt * 1000);
   document.querySelector('#time').innerHTML = formatTime(response.data.dt * 1000);
+  document
+    .querySelector('#icon')
+    .setAttribute(
+      'src',
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 //City search
