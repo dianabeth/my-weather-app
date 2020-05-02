@@ -45,10 +45,18 @@ function formatDate(timestamp) {
 
   return `${day}, ${today} ${month} ${year}`;
 }
+
+//Units conversion
+function displayFahrenheitTemp(event) {
+  let fahrenheitLink = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector('.temperature').innerHTML = Math.round(fahrenheitLink);
+}
+
 //Current location search
 function currentWeather(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector('h1').innerHTML = response.data.name;
-  document.querySelector('.temperature').innerHTML = Math.round(response.data.main.temp);
+  document.querySelector('.temperature').innerHTML = Math.round(celsiusTemperature);
   document.querySelector('#description').innerHTML = response.data.weather[0].description;
   document.querySelector('#humidity').innerHTML = response.data.main.humidity;
   document.querySelector('#wind').innerHTML = Math.round(response.data.wind.speed);
@@ -125,6 +133,11 @@ button.addEventListener('click', retrievePosition);
 
 let city = document.querySelector('#search-form');
 city.addEventListener('click', findCity);
+
+let celsiusTemperature = document.querySelector('.temperature');
+
+let fahrenheit = document.querySelector('#fahrenheit-link');
+fahrenheit.addEventListener('click', displayFahrenheitTemp);
 
 let abuja = document.querySelector('#abuja');
 abuja.addEventListener('click', abujaTemp);

@@ -11,21 +11,19 @@ ul {
 }
 
 footer {
-  position: relative;
-  top: -40px;
   text-align: center;
 }
 
 input {
   position: relative;
-  top: 30px;
+  top: 40px;
   left: 5px;
   display: block;
 }
 
 li {
   position: relative;
-  bottom: 130px;
+  bottom: 110px;
   left: 180px;
   font-size: 12px;
   font-weight: 600;
@@ -36,9 +34,9 @@ li {
 }
 
 h1 {
+  margin-top: 35px;
   font-size: 20px;
   font-family: 'Gotu', sans-serif;
-  margin: 5px;
   padding: 10px 0;
   font-weight: 900;
   color: firebrick;
@@ -67,7 +65,7 @@ h1 {
 }
 #description {
   position: relative;
-  top: -40px;
+  top: -20px;
   margin: 25px;
   display: inline;
   color: darkblue;
@@ -83,7 +81,7 @@ h1 {
 
 .container {
   max-width: 500px;
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 .header {
@@ -91,9 +89,7 @@ h1 {
 }
 
 .weather-app {
-  /*background-image: url('https://seojames.com/wp-content/uploads/2017/10/Clear-Skies-Ahead.jpg');*/
   background-image: url('https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
-  /* background-image: url('https://www.thoughtco.com/thmb/9-iCj7lj21Dd8zFGWnbiVzhi5n8=/1333x1000/smart/filters:no_upscale()/clouds-5b6b4e50c9e77c0050491212.jpg');*/
   padding: 10px;
   margin: 15px;
   border-radius: 10px;
@@ -107,7 +103,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  bottom: 80px;
+  bottom: 100px;
   padding: 0;
   margin: 2px;
   text-align: center;
@@ -126,18 +122,18 @@ h1 {
 .temperature {
   position: relative;
   top: 25px;
-  right: 3px;
-  /*color: #dc143c;*/
+  left: 15px;
+  margin-left: -25px;
   color: darkblue;
   font-weight: 400;
-  font-size: 43px;
+  font-size: 45px;
   line-height: 1;
 }
 
 .units {
   position: relative;
   top: 5px;
-  right: 2px;
+  left: 10px;
   color: firebrick;
 }
 
@@ -152,7 +148,8 @@ h1 {
 }
 .main_reading {
   position: relative;
-  bottom: 50px;
+  bottom: 40px;
+  left: -20px;
 }
 
 .search-btn {
