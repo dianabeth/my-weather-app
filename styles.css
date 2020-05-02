@@ -71,6 +71,7 @@ h1 {
   margin: 25px;
   display: inline;
   color: darkblue;
+  text-transform: capitalize;
 }
 
 #humidity,
