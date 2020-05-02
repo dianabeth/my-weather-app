@@ -1,34 +1,50 @@
 // Display date and time
-let date = new Date();
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
 
-let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-let today = days[date.getDay()];
-let months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-let month = months[date.getMonth()];
-let todaysDate = date.getDate();
-let year = date.getFullYear();
-let hours = ('0' + date.getHours()).slice(-2);
-let minutes = ('0' + date.getMinutes()).slice(-2);
-let seconds = ('0' + date.getSeconds()).slice(-2);
-let updatedDate = document.querySelector('#date');
-let updatedTime = document.querySelector('#time');
-updatedDate.innerHTML = `${today}, ${month} ${todaysDate}, ${year}`;
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-updatedTime.innerHTML = `${hours}:${minutes}:${seconds}`;
+  let seconds = date.getSeconds();
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
 
+  return `${hours}:${minutes} ${seconds}`;
+}
+
+// Display date and time
+function formatDate(timestamp) {
+  let dates = new Date(timestamp);
+
+  let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  let day = days[dates.getDay()];
+  let months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'June',
+    'July',
+    'Aug',
+    'Sept',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+  let month = months[dates.getMonth()];
+  let today = dates.getDate();
+  let year = dates.getFullYear();
+
+  return `${day},${today} ${month} ${year}`;
+}
 //Current location search
 function currentWeather(response) {
   document.querySelector('h1').innerHTML = response.data.name;
@@ -39,6 +55,8 @@ function currentWeather(response) {
   document.querySelector('#max').innerHTML = Math.round(response.data.main.temp_max);
   document.querySelector('#min').innerHTML = Math.round(response.data.main.temp_min);
   console.log(response.data);
+  document.querySelector('#date').innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector('#time').innerHTML = formatTime(response.data.dt * 1000);
 }
 
 //City search
@@ -77,18 +95,22 @@ function abujaTemp(event) {
 }
 
 function lagostemp(event) {
+  event.preventDefault();
   search('Lagos');
 }
 
 function lisbonTemp(event) {
+  event.preventDefault();
   search('lisbon');
 }
 
 function madridTemp(event) {
+  event.preventDefault();
   search('madrid');
 }
 
 function parisTemp(event) {
+  event.preventDefault();
   search('paris');
 }
 
