@@ -10,7 +10,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Gotu|Merriweather+Sans|Merriweather:300,400,400i,700,900,900i&display=swap"
       rel="stylesheet"
@@ -19,7 +19,10 @@
       href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Roboto:ital,wght@1,300&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/4d0ff6fe7e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4d0ff6fe7e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
@@ -57,7 +60,12 @@
                 class="form-control shadow-sm border-0"
               />
 
-              <input type="submit" value="Search" id="search-btn" class="btn btn-primary shadow" />
+              <input
+                type="submit"
+                value="Search"
+                id="search-btn"
+                class="btn btn-primary shadow"
+              />
               <input
                 type="submit"
                 value="Current Location"
@@ -73,14 +81,15 @@
           <p id="time"></p>
           <span id="description"></span>
         </div>
+
         <div class="row main_reading">
           <div class="col-6">
             <div class="clear-fix">
               <img
-                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                src=""
                 alt="partly_cloudy icon"
                 class="weather_icon float-left"
-                id="partly-cloudy"
+                id="icon"
               />
             </div>
             <div class="float-left">
@@ -97,7 +106,7 @@
             <li>Humidity: <span id="humidity"></span> %</li>
             <li>Highest: <span id="max"></span> ºC</li>
             <li>Lowest: <span id="min"></span> ºC</li>
-            <li>Wind: <span id="wind"> </span> km/h</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
           </ul>
         </div>
 
@@ -108,7 +117,7 @@
                 src="https://ssl.gstatic.com/onebox/weather/48/sunny_s_cloudy.png"
                 alt="sunny_s_cloudy icon"
                 class="float-left"
-                id="tuesday"
+                id="icon"
               />
               Tue
             </div>
@@ -121,6 +130,7 @@
                 src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
                 alt="rain cloud icon"
                 class="float-left"
+                id="icon"
               />
               Wed
             </div>
@@ -133,6 +143,7 @@
                 src="https://ssl.gstatic.com/onebox/weather/48/sunny_s_cloudy.png"
                 alt="sunny_cloud icon"
                 class="float-left"
+                id="icon"
               />
               Thur
             </div>
@@ -145,6 +156,7 @@
                 src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
                 alt="partly_cloudy icon"
                 class="float-left"
+                id="icon"
               />
               Fri
             </div>
@@ -157,35 +169,26 @@
                 src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
                 alt="light_rain icon"
                 class="float-left"
-                id="saturday"
+                id="icon"
               />
               Sat
             </div>
             <div class="float-left">17ºC</div>
           </div>
-
-          <!--  <div class="col-2">
-            <div class="clear-fix">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="sunny_s_cloudy icon"
-                class="float-left"
-                id="sunday"
-              />
-              Sun
-            </div>
-            <div class="float-left">17ºC</div>
-          </div>-->
         </div>
       </div>
     </div>
     <footer>
       <small>
-        <a href="https://github.com/dianabeth/my-weather-app">Open-Source code</a> by
+        <a href="https://github.com/dianabeth/my-weather-app"
+          >Open-Source code</a
+        >
+        by
         <a href="#">Diana Odiaka-Obiagwu</a>
       </small>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
+

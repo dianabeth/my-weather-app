@@ -43,7 +43,7 @@ function formatDate(timestamp) {
   let today = dates.getDate();
   let year = dates.getFullYear();
 
-  return `${day},${today} ${month} ${year}`;
+  return `${day}, ${today} ${month} ${year}`;
 }
 //Current location search
 function currentWeather(response) {
