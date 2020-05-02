@@ -54,7 +54,6 @@ function currentWeather(response) {
   document.querySelector('#wind').innerHTML = Math.round(response.data.wind.speed);
   document.querySelector('#max').innerHTML = Math.round(response.data.main.temp_max);
   document.querySelector('#min').innerHTML = Math.round(response.data.main.temp_min);
-  console.log(response.data);
   document.querySelector('#date').innerHTML = formatDate(response.data.dt * 1000);
   document.querySelector('#time').innerHTML = formatTime(response.data.dt * 1000);
 }
