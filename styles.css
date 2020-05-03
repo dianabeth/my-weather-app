@@ -65,7 +65,7 @@ h1 {
 }
 #description {
   position: relative;
-  top: -20px;
+  top: -40px;
   margin: 25px;
   display: inline;
   color: darkblue;
@@ -134,7 +134,6 @@ h1 {
   position: relative;
   top: 5px;
   left: 10px;
-  color: firebrick;
 }
 
 .clear-fix {
@@ -146,10 +145,23 @@ h1 {
   color: #0069d9;
   text-align: center;
 }
-.main_reading {
+.main-reading {
   position: relative;
-  bottom: 40px;
+  bottom: 60px;
   left: -20px;
+}
+
+.main-display .active{
+  color: firebrick;
+  cursor: default;
+}
+
+.main-display .active:hover{
+  text-decoration: none;
+}
+
+.main-display strong{
+  color: black;
 }
 
 .search-btn {

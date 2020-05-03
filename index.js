@@ -98,12 +98,16 @@ function retrievePosition(event) {
 //Units conversion
 function displayFahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitLink = (celsiusTemperature * 9) / 5 + 32;
-  document.querySelector('.temperature').innerHTML = Math.round(fahrenheitLink);
+   celsiusLink.classList.remove('active');
+   fahrenheitLink.classList.add('active');
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector('.temperature').innerHTML = Math.round(fahrenheitTemp);
 }
 
 function displayCelsiusTemp(event) {
   event.preventDefault();
+  fahrenheitLink.classList.remove('active');
+  celsiusLink.classList.add("active");
   document.querySelector('.temperature').innerHTML = celsiusTemperature;
 }
 
@@ -145,8 +149,8 @@ let celsiusTemperature = null;
 let celsiusLink = document.querySelector('#celsius-link');
 celsiusLink.addEventListener('click', displayCelsiusTemp);
 
-let fahrenheit = document.querySelector('#fahrenheit-link');
-fahrenheit.addEventListener('click', displayFahrenheitTemp);
+let fahrenheitLink = document.querySelector('#fahrenheit-link');
+fahrenheitLink.addEventListener('click', displayFahrenheitTemp);
 
 let abuja = document.querySelector('#abuja');
 abuja.addEventListener('click', abujaTemp);
