@@ -36,7 +36,7 @@ li {
 h1 {
   margin-top: 35px;
   font-size: 22px;
-  font-family: "Gotu", sans-serif;
+  font-family: 'Gotu', sans-serif;
   padding: 10px 0;
   font-weight: 900;
   color: firebrick;
@@ -45,7 +45,7 @@ h1 {
 
 #date,
 #time {
-  font-family: "Gotu", sans-serif;
+  font-family: 'Gotu', sans-serif;
   line-height: 0;
   font-weight: 900;
   font-size: 12px;
@@ -89,7 +89,7 @@ h1 {
 }
 
 .weather-app {
-  background-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+  background-image: url('https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
   padding: 10px;
   margin: 15px;
   border-radius: 10px;
@@ -122,9 +122,10 @@ h1 {
 
 .weather-forecast img {
   display: block;
-  margin: 0;
-  height: 55px;
-  width: 55px;
+  position: relative;
+  left: -10px;
+  height: 65px;
+  width: 65px;
   line-height: 0;
   margin: 0;
   padding: 0;
@@ -190,4 +191,3 @@ h1 {
   margin: 6px;
   left: 10px;
 }
-
