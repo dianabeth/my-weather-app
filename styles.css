@@ -65,7 +65,7 @@ h1 {
 }
 #description {
   position: relative;
-  top: -40px;
+  top: -20px;
   margin: 25px;
   display: inline;
   color: darkblue;
@@ -147,8 +147,8 @@ h1 {
 }
 .main-reading {
   position: relative;
-  bottom: 60px;
-  left: -20px;
+  bottom: 40px;
+  left: 0;
 }
 
 .main-display .active{
