@@ -46,17 +46,11 @@ function formatDate(timestamp) {
   return `${day}, ${today} ${month} ${year}`;
 }
 
-//Units conversion
-function displayFahrenheitTemp(event) {
-  let fahrenheitLink = (celsiusTemperature * 9) / 5 + 32;
-  document.querySelector('.temperature').innerHTML = Math.round(fahrenheitLink);
-}
-
 //Current location search
 function currentWeather(response) {
-  celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = Math.round(response.data.main.temp);
   document.querySelector('h1').innerHTML = response.data.name;
-  document.querySelector('.temperature').innerHTML = Math.round(celsiusTemperature);
+  document.querySelector('.temperature').innerHTML = celsiusTemperature;
   document.querySelector('#description').innerHTML = response.data.weather[0].description;
   document.querySelector('#humidity').innerHTML = response.data.main.humidity;
   document.querySelector('#wind').innerHTML = Math.round(response.data.wind.speed);
@@ -101,6 +95,18 @@ function retrievePosition(event) {
   navigator.geolocation.getCurrentPosition(showWeather);
 }
 
+//Units conversion
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitLink = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector('.temperature').innerHTML = Math.round(fahrenheitLink);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  document.querySelector('.temperature').innerHTML = celsiusTemperature;
+}
+
 //Quick search navigation bar
 function abujaTemp(event) {
   event.preventDefault();
@@ -134,7 +140,10 @@ button.addEventListener('click', retrievePosition);
 let city = document.querySelector('#search-form');
 city.addEventListener('click', findCity);
 
-let celsiusTemperature = document.querySelector('.temperature');
+let celsiusTemperature = null;
+
+let celsiusLink = document.querySelector('#celsius-link');
+celsiusLink.addEventListener('click', displayCelsiusTemp);
 
 let fahrenheit = document.querySelector('#fahrenheit-link');
 fahrenheit.addEventListener('click', displayFahrenheitTemp);
